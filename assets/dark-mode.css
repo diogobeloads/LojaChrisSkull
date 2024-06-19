@@ -1,0 +1,19 @@
+/* Estilos para o modo escuro */
+body.dark-mode {
+  background-color: #000000; /* Cor de fundo do modo escuro */
+  color: #f0f0f0; /* Cor do texto do modo escuro */
+}
+
+.dark-mode header {
+  background-color: #000000;
+  color: #f0f0f0;
+}
+
+.dark-mode .content {
+  background-color: #000000;
+  color: #f0f0f0;
+}
+
+.dark-mode .container li a {
+  color: #ffffff;
+}

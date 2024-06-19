@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rosario", sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  padding: 16px 0 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 56px;
+}
+
+.loja h3 {
+  margin-bottom: 16px;
+}
+
+.loja {
+  border-top: 1px solid #257400;
+}
+.submenu {
+  display: none;
+  background-color: #fff;
+  border: solid rgb(11, 113, 160);
+  position: absolute;
+  left: 0;
+  width: 300px;
+  top: 56px;
+}
+
+.menu li a {
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.menu > li {
+  float: left;
+  list-style: none;
+  padding: 16px;
+  border-bottom: 4px solid transparent;
+  position: relative;
+}
+
+.clear {
+  clear: both;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+.menu li:hover {
+  border-color: #257400;
+  transform: scale(1.1);
+}
+.submenu li {
+  display: block;
+  padding: 8px;
+}
+
+h3 {
+  font-size: 12pt;
+}
+.conteudo {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.produtos img {
+  max-width: 100%;
+  margin: 8px 4px;
+}
+
+.produtos img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+.destaque {
+  display: flex;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+.destaque img {
+  width: 400px;
+}
+
+.destaque .produtos li {
+  display: flex;
+  font-size: 1.5em;
+}
+
+.destaque .produtos img {
+  margin-right: 8px;
+}
+
+.destaque p {
+  font-size: 12pt;
+  margin-left: 16px;
+}
+
+section .novidades {
+  margin-bottom: 16px;
+}
+section h2 {
+  margin-bottom: 32px;
+}
+
+aside {
+  padding-left: 40px;
+}
+
+aside .loja {
+  margin-bottom: 10px;
+}
+
+.loja {
+  display: grid;
+  grid-template-columns: repeat(4, 22.5%);
+  column-gap: 1%;
+  row-gap: 3%;
+}
+
+.botao-carrinho {
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  background: linear-gradient(to bottom, #257400 5%, #72b352 100%);
+  background-color: #257400;
+  border-radius: 4px;
+  border: 1px solid #4b8f29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5b8a3c;
+  margin: 8px 0 16px;
+}
+
+.botao-carrinho {
+  background: linear-gradient(to bottom, #72b352 5%, #257400 100%);
+  background-color: #72b352;
+}
+.botao-carrinho {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (max-width: 640px) {
+  .conteudo {
+    display: block;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .destaque .produtos li {
+    display: block;
+    font-size: 1.5em;
+  }
+
+  .destaque .produtos img {
+    margin-right: 0;
+  }
+
+  .loja {
+    display: block;
+  }
+
+  .loja .produtos {
+    margin-bottom: 32px;
+  }
+
+  aside {
+    padding-left: 0;
+  }
+
+  header div.container {
+    flex-direction: column;
+  }
+
+  .submenu {
+    display: block;
+    width: 100%;
+    position: relative;
+    border: none;
+  }
+
+  .menu > li {
+    clear: both;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu li a {
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .submenu li {
+    display: block;
+    padding: 8px;
+  }
+
+  .botao-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .botao-menu button {
+    padding: 8px;
+  }
+}
+
+.overlay-imagem-link {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+
+.overlay-imagem-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link {
+  opacity: 1;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+
+  @media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+      max-width: 90%;
+    }
+
+    .botao-menu {
+      display: none;
+    }
+
+    .destaque .produtos a {
+      font-size: 1.5em;
+    }
+
+    .loja {
+      grid-template-columns: repeat(2, 49%);
+    }
+  }
+}
